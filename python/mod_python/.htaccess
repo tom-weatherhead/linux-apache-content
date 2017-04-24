@@ -1,0 +1,7 @@
+AddHandler mod_python .py
+PythonHandler mod_python.publisher
+PythonDebug On
+
+<Files ~ "\.(gif|html|jpg|png)$">
+	SetHandler default-handler
+</Files>

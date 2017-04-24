@@ -1,0 +1,23 @@
+AuthType Basic
+AuthName "Restricted operation"
+# The next line is optional; "file" is the default value
+AuthBasicProvider file
+AuthUserFile /etc/apache2/passwords/resttest
+
+<Limit POST PUT DELETE>
+    Require valid-user
+</Limit>
+
+#Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #RewriteLog "/tmp/rewrite.log"
+    #RewriteLogLevel 9
+
+    RewriteRule ^$ service.php?request= [QSA,NC,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*)$ service.php?request=$1 [QSA,NC,L]
+</IfModule>

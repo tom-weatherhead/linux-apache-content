@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Update an Author</title>
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="update.js"></script>
+    </head>
+    <body>
+        <label for="first_name">First name: </label>
+        <input type="text" id="first_name" name="first_name" />
+        <br />
+        <label for="last_name">Last name: </label>
+        <input type="text" id="last_name" name="last_name" />
+        <br />
+        <label for="birth_year">Birth year: </label>
+        <input type="text" id="birth_year" name="birth_year" />
+        <br />
+        <label for="death_year">Death year: </label>
+        <input type="text" id="death_year" name="death_year" />
+        <br />
+        <input type="button" id="updateAuthor" value="Update" onclick="btnUpdate_onClick()" />
+
+        <br />
+
+        <a href="index.html">Back to index</a>
+    </body>
+</html>

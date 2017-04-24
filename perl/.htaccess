@@ -1,0 +1,8 @@
+<FilesMatch "\.(cgi)$">
+	PerlModule ModPerl::Registry
+	SetHandler perl-script
+	PerlResponseHandler ModPerl::Registry
+	PerlOptions +ParseHeaders
+	#PerlOptions -GlobalRequest
+	Options +ExecCGI
+</FilesMatch>

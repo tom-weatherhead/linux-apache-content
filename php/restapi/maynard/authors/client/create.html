@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Create an Author</title>
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="create.js"></script>
+    </head>
+    <body>
+        <p>Create via an HTML form</p>
+        <form action="../service/" method="post">
+            <p>
+                <!-- The input elements must have name attributes in order for the post to work. -->
+                <!-- See http://geekbrit.tumblr.com/post/1470396976/php-post-array-is-empty -->
+                <label for="first_name">First name: </label>
+                <input type="text" id="first_name" name="first_name" />
+                <br />
+                <label for="last_name">Last name: </label>
+                <input type="text" id="last_name" name="last_name" />
+                <br />
+                <label for="birth_year">Birth year: </label>
+                <input type="text" id="birth_year" name="birth_year" />
+                <br />
+                <label for="death_year">Death year: </label>
+                <input type="text" id="death_year" name="death_year" />
+                <br />
+                <input type="submit" value="Send" />
+                <input type="reset" />
+            </p>
+        </form>
+
+        <hr />
+
+        <p>Create via a jQuery AJAX POST using JSON</p>
+        <label for="first_name2">First name: </label>
+        <input type="text" id="first_name2" name="first_name2" />
+        <br />
+        <label for="last_name2">Last name: </label>
+        <input type="text" id="last_name2" name="last_name2" />
+        <br />
+        <label for="birth_year2">Birth year: </label>
+        <input type="text" id="birth_year2" name="birth_year2" />
+        <br />
+        <label for="death_year2">Death year: </label>
+        <input type="text" id="death_year2" name="death_year2" />
+        <br />
+        <input type="button" id="createAuthor" value="Create" onclick="btnCreate_onClick()" />
+
+        <br />
+
+        <a href="index.html">Back to index</a>
+    </body>
+</html>
